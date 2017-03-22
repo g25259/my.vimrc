@@ -49,7 +49,7 @@ Plug 'brookhong/cscope.vim'
 Plug 'godlygeek/tabular'
 Plug 'derekwyatt/vim-fswitch'
 Plug 'derekwyatt/vim-protodef'
-
+Plug 'github/gitignore'
 
 let g:make = 'gmake'
 if system('uname -o') =~ '^GNU/'
@@ -502,6 +502,7 @@ let g:ycm_seed_identifiers_with_syntax=1
 let g:ycm_key_list_select_completion = ['<c-space>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
 imap <c-o> <esc>o
+imap <c-e> <End>
 " Set path of python binary
 "let g:ycm_python_binary_path = '/synosrc/curr/ds.base/CIENVS/venv/bin/python'
 " 馬上執行檢查
@@ -608,7 +609,7 @@ autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab
 " html
 " for html files, 2 spaces
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
-
+au BufNewFile, BufRead *.handlebars set file type=html
 
 " javascript
 let g:javascript_enable_domhtmlcss = 1
